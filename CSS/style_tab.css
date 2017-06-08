@@ -1,0 +1,43 @@
+@media (min-width: 370px)
+{
+
+    body
+    {
+    	background-image: url(../images/tablet.jpg);
+    }
+
+	.main-nav a
+	{
+		float: left;
+		width: 23%;
+		margin: .8%;
+		font-size: 75%;
+	}
+
+	.articulo
+	{
+		float: left;
+		margin: .5%;
+	}
+
+	.main_footer
+	{
+		overflow: hidden;
+	}
+
+	.principal
+	{
+		overflow: hidden;
+	}
+
+	.div_footer
+	{
+		float: left;
+		width: 30%;
+		min-height: 50px;
+	}
+
+
+
+
+} /*fin @media (min-width: 600px)*/ 

@@ -1,0 +1,92 @@
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body 
+{
+	font-size: 16px;
+}
+
+body
+{
+	background-image: url(../images/movil.jpg);
+	text-align: center;
+}
+
+.container
+{
+	max-width: 1180px;
+	margin: auto;
+}
+
+ul li
+{
+	list-style-type: none;
+}
+
+nav
+{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.principal, .main_footer, .main-header
+{
+	width: 100%;
+	margin: 15px;
+}
+
+.main-nav a, .main_footer a {
+	background-color: #333333;
+	color: white;
+	display: block;
+	width: 100%;
+	margin: 3px 0;
+	padding: 5px;
+}
+
+.main-header img {
+	border-radius: 10px;
+	width: 70%;
+}
+
+.articulo
+{
+	border: 1px solid black;
+	width: 100%;
+	margin: 2px;
+	padding: 20px;
+	text-align: left;
+	margin: 2px;
+}
+
+.articulo img {
+	width: 100%;
+}
+
+.articulo a {
+	padding: 10px;
+	background-color: #343434;
+	border-radius: 5px;
+	margin: 20px;
+	color: white;
+}
+
+.articulo h2, .articulo p
+{
+	margin: 20px;
+}
+
+.div_footer
+{
+	border: 1px solid red;
+	margin: 5px;
+}
+
+.main_footer
+{
+	background-color: green;
+}
