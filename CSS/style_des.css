@@ -1,9 +1,10 @@
 @media (min-width: 990px)
 {
- 
+
    body
     {
     	background-image: url(../images/desktop.jpg);
+      font-family: 'Roboto', sans-serif;
     }
 	.articulo
 	{
@@ -14,6 +15,9 @@
 	.main-nav a
 	{
 		font-size: 100%;
+    border-radius: 15px;
 	}
 
-} /*fin @media (min-width: 990px)*/ 
+
+
+} /*fin @media (min-width: 990px)*/

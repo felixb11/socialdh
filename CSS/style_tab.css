@@ -1,4 +1,4 @@
-@media (min-width: 370px)
+@media (min-width: 768px)
 {
 
     body
@@ -40,4 +40,4 @@
 
 
 
-} /*fin @media (min-width: 600px)*/ 
+} /*fin @media (min-width: 600px)*/
