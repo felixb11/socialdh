@@ -12,7 +12,8 @@ html, body
 
 body
 {
-	background-image: url(../images/movil.jpg);
+	/*background-image: url(../images/movil.jpg);*/
+	background-color: yellow;
 	text-align: center;
 }
 
