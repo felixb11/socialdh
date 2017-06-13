@@ -1,12 +1,7 @@
 @media (min-width: 990px)
 {
 
-   body
-    {
-    	/*background-image: url(../images/desktop.jpg);*/
-      font-family: 'Roboto', sans-serif;
-      background-color: orange;
-    }
+/*
 	.articulo
 	{
 		float: left;
@@ -16,9 +11,9 @@
 	.main-nav a
 	{
 		font-size: 100%;
-    border-radius: 15px;
+    
 	}
 
-
+*/
 
 } /*fin @media (min-width: 990px)*/

@@ -8,12 +8,12 @@
 html, body
 {
 	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
 }
 
 body
 {
-	/*background-image: url(../images/movil.jpg);*/
-	background-color: yellow;
+	background-image: url(../images/fondo.jpg);
 	text-align: center;
 }
 
@@ -45,7 +45,8 @@ nav
 	color: white;
 	display: block;
 	width: 100%;
-	margin: 3px 0;
+/*	margin: 3px 0;*/
+	border: 1px solid white;
 	padding: 5px;
 }
 
@@ -54,40 +55,52 @@ nav
 	width: 70%;
 }
 
-.articulo
+.articulo-inicio, .principal-registro, .principal-ingreso, .principal-preguntas
 {
-	border: 1px solid black;
+	
+	border-bottom: 1px solid black;
 	width: 100%;
-
-	padding: 20px;
-	text-align: left;
+	padding: 5px;
 	
 }
 
-.articulo img {
-	width: 100%;
-}
-
-.articulo a {
-	padding: 10px;
-	background-color: #343434;
-	border-radius: 5px;
-	margin: 20px;
-	color: white;
-}
-
-.articulo h2, .articulo p
+h2, p
 {
-	margin: 20px;
+	margin: 15px;
 }
 
 .div_footer
 {
-	border: 1px solid red;
 	margin: 5px;
 }
 
-.main_footer
+.principal-registro form, .principal-ingreso form
 {
-	background-color: green;
+	display: inline-block;
+	text-align: right;
 }
+
+.principal-registro .formulario, .principal-ingreso .formulario
+{
+	display: inline;
+}
+
+.formulario input
+{
+	border: 1px solid black;
+}
+
+form 
+{
+	margin: 20px;
+}
+
+.principal-preguntas .preguntas
+{
+	display: inline-block;
+	text-align: left;
+}
+
+
+
+
