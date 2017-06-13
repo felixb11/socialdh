@@ -1,6 +1,20 @@
 @media (min-width: 768px)
 {
 
+	.arriba 
+	{
+		display: inline;
+	}
+
+	.arriba img
+	{
+		width: 40px;
+		height: 40px;
+		position: fixed;
+		right:  20px;
+		bottom: 20px; 
+	}
+
 	.main-nav a
 	{
 		float: left;
