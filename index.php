@@ -1,3 +1,6 @@
+<?php 
+echo "Esto es PHP";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
