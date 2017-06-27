@@ -1,0 +1,31 @@
+body
+{
+	background-image: url(../images/fondo.jpg);
+
+}
+
+#index
+{
+	
+}
+
+#registro
+{
+	background: yellow;
+}
+
+#ingreso
+{
+	background: blue;
+}
+
+#preguntas
+{
+	background: red;
+}
+
+#footer
+
+{
+	background: pink;
+}

@@ -1,55 +1,18 @@
-<!DOCTYPE html>
-<html>
-	<head>
+<?php 
+?>
+<h1>Aca va a estar el REGISTRO</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis maxime sint eligendi autem, explicabo, cupiditate tenetur praesentium unde, nobis nam quasi, iure error voluptates? Exercitationem eum doloremque, vitae vel!
 
-		<meta charset="utf-8">
-		<title>Registro</title>
-		<link rel="stylesheet" type="text/css" href="css/style_mov.css">
-		<link rel="stylesheet" type="text/css" href="css/style_tab.css">
-		<link rel="stylesheet" type="text/css" href="css/style_des.css">	
-				
-	</head>
-	<body>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odit vel, soluta molestias officiis, possimus eligendi quaerat ipsum mollitia omnis. Nisi sint optio perspiciatis eum voluptates nostrum quaerat cumque quos!
 
-	<div class="container">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia repellat odio, modi, laboriosam mollitia, aliquam nemo doloribus ipsam quas voluptate id fugiat repellendus quo numquam fuga harum placeat neque.
 
-		<header class="main-header">
-			<img src="images/logo.jpg" alt="logotipo" class="logo">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis assumenda ipsum maxime expedita facilis voluptatem repellendus nostrum, ut, dolor architecto harum a debitis et amet sequi earum officiis velit, repudiandae.</p>
 
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis maxime sint eligendi autem, explicabo, cupiditate tenetur praesentium unde, nobis nam quasi, iure error voluptates? Exercitationem eum doloremque, vitae vel!
 
-			<nav class="main-nav">
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="registro.html">Registro</a></li>
-					<li><a href="ingreso.html">Ingreso</a></li>
-					<li><a href="preguntas.html">Frecuentes</a></li>
-				</ul>
-			</nav>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odit vel, soluta molestias officiis, possimus eligendi quaerat ipsum mollitia omnis. Nisi sint optio perspiciatis eum voluptates nostrum quaerat cumque quos!
 
-		</header>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia repellat odio, modi, laboriosam mollitia, aliquam nemo doloribus ipsam quas voluptate id fugiat repellendus quo numquam fuga harum placeat neque.
 
-		<main class="principal">
-		
-		<div class="principal-registro">
-			<form action="">
-				Nombre: <input type="text" name="nombre"><br><br>
-				Apellido: <input type="text" name="apellido"><br><br>
-				Dirección: <input type="text" name="direccion"><br><br>
-				eMail: <input type="email" name="mail"><br><br>
-				Deporte: <input type="text" name="deporte"><br><br>
-				Cumpleaños: <input type="date" name="nacimiento"><br><br>
-				<input type="submit" name="enviar">
-			</form>
-		</div>	
-
-		</main>
-
-		<footer class="main_footer">
-			<div class="div_footer">Izquierdo</div>
-			<div class="div_footer">Centro</div>
-			<div class="div_footer">Derecho</div>			
-		</footer>
-	</div>
-
-	</body>
-</html>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis assumenda ipsum maxime expedita facilis voluptatem repellendus nostrum, ut, dolor architecto harum a debitis et amet sequi earum officiis velit, repudiandae.</p>
