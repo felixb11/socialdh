@@ -1,18 +1,17 @@
 <?php 
 ?>
-<h1>Aca van a estar las PREGUNTAS FRECUENTES</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis maxime sint eligendi autem, explicabo, cupiditate tenetur praesentium unde, nobis nam quasi, iure error voluptates? Exercitationem eum doloremque, vitae vel!
+<h1>PREGUNTAS FRECUENTES</h1>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odit vel, soluta molestias officiis, possimus eligendi quaerat ipsum mollitia omnis. Nisi sint optio perspiciatis eum voluptates nostrum quaerat cumque quos!
+<ul class="list-group">
+	<li class="list-group-item active">Pregunta uno</li>
+	<li class="list-group-item active">Pregunta dos</li>
+	<li class="list-group-item active">Pregunta tres</li>
+	<li class="list-group-item active">Pregunta cuatro</li>
+	<li class="list-group-item active">Pregunta cinco</li>
+</ul>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia repellat odio, modi, laboriosam mollitia, aliquam nemo doloribus ipsam quas voluptate id fugiat repellendus quo numquam fuga harum placeat neque.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis assumenda ipsum maxime expedita facilis voluptatem repellendus nostrum, ut, dolor architecto harum a debitis et amet sequi earum officiis velit, repudiandae.</p>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum officiis maxime sint eligendi autem, explicabo, cupiditate tenetur praesentium unde, nobis nam quasi, iure error voluptates? Exercitationem eum doloremque, vitae vel!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum odit vel, soluta molestias officiis, possimus eligendi quaerat ipsum mollitia omnis. Nisi sint optio perspiciatis eum voluptates nostrum quaerat cumque quos!
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo officia repellat odio, modi, laboriosam mollitia, aliquam nemo doloribus ipsam quas voluptate id fugiat repellendus quo numquam fuga harum placeat neque.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis assumenda ipsum maxime expedita facilis voluptatem repellendus nostrum, ut, dolor architecto harum a debitis et amet sequi earum officiis velit, repudiandae.</p>
+<div class="list-group">
+  <a href="#" class="list-group-item active">First item</a>
+  <a href="#" class="list-group-item">Second item</a>
+  <a href="#" class="list-group-item">Third item</a>
+</div>
