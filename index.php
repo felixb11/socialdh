@@ -1,4 +1,4 @@
-<div id="index" class="container">
+<div id="inicio" class="container">
 <?php 
 include_once ("header.php");
 ?>

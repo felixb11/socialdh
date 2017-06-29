@@ -26,7 +26,7 @@
 	</div>	
 
 	<div class="form-group">
-		<input type="submit" class="btn btn-defaul" id="boton">
+		<input type="submit" class="btn btn-warning" id="boton">
 	</div>
 				
 </form>

@@ -1,31 +1,10 @@
 body
 {
 	background-image: url(../images/fondo.jpg);
-
+	padding: 70px;
 }
 
-#index
+#inicio, #registro, #ingreso, #preguntas, #footer
 {
-	
-}
-
-#registro
-{
-	background: yellow;
-}
-
-#ingreso
-{
-	background: blue;
-}
-
-#preguntas
-{
-	background: red;
-}
-
-#footer
-
-{
-	background: pink;
+	padding-top: 40px;
 }

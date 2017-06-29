@@ -9,9 +9,9 @@
 		<link rel="stylesheet" type="text/css" href="css/style_mov.css">
 		<link rel="stylesheet" type="text/css" href="css/style_tab.css">
 		<link rel="stylesheet" type="text/css" href="css/style_des.css">
--->			
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/styles.css">
+-->		
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/styles.css">	
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
@@ -19,7 +19,7 @@
 
 <div class="container">
 	<header>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fuid">
 				<!-- Menu para moviles-->
 				<div class="navbar-header">
