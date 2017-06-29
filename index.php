@@ -11,7 +11,8 @@ include_once ("header.php");
 </div>
 
 <div id="registro" class="container">
-<?php 
+<?php
+
 include_once ("registro.php");
 ?>
 </div>

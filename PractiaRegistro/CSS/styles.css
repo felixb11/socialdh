@@ -1,0 +1,10 @@
+body
+{
+	background-image: url(../images/fondo.jpg);
+	padding: 70px;
+}
+
+#inicio, #registro, #ingreso, #preguntas, #footer
+{
+	padding-top: 40px;
+}
