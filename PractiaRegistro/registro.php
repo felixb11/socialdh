@@ -20,6 +20,7 @@ if ($_POST)
 else
 {
 	echo "Ingreso por get<br>";
+	var_dump($_GET);
 }
 
 $paises = [
@@ -28,13 +29,13 @@ $paises = [
 	 "uru" => "uruguay"
 	 ];
 
-var_dump($paises);
 ?>
 
 
 <div class="container">
 
-<form action="registro.php" method="post">
+<form action="registro.php" method="get">
+
 	<div class="form-group">
 		<label for="nombre">Nombre</label>
 		<input type="text" class="form-control" id="nombre" name="nombre">
@@ -53,10 +54,11 @@ var_dump($paises);
 	<div class="form-group">
 		<label for="pais">Pais</label>
 		<select name="pais" id="pais" class="form-control">
+
 			
-			<?php foreach ($paises as $clave => $pais): ?>
-				<?php if ($clave == $_POST["pais"]): ?>
-					<option value="<?= $clave ?>" select>
+			<?php foreach ($paises as $clave => $pais) : ?>
+				<?php if ($clave == $_POST["pais"]) : ?>
+					<option value="<?= $clave ?>" selected>
 						<?=$pais?>
 					</option>
 				<?php else: ?>
@@ -65,25 +67,21 @@ var_dump($paises);
 					</option>
 				<?php endif ?>
 			<?php endforeach ?>
-		</select>
 
-<!--
-<select id="pais" class="form-control" name="pais">
-  <option value="volvo">Volvo</option>
-  <option value="saab" selected>Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
--->
+
+		</select>
 
 	</div>
 	
 	<div class="form-group">
 		<label for="pwd">Contraseña</label>
 		<input type="password" id="pwd" class="form-control" name="pwd">
-	
+
+
 		<label for="c_pwd">Confirmar contraseña</label>
 		<input type="password" id="c_pwd" class="form-control" name="c_pwd">
+
+
 	</div>	
 
 	<div class="form-group">
