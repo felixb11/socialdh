@@ -1,8 +1,10 @@
 <?php 
+include_once("header.php");
 
 ?>
 <h1>Aca va a estar el INGRESO</h1>
-<div class="col-xs-offset-2 col-xs-2 col-md-offset-2 col-md-6">
+<div class="row">
+<div class="col-xs-6">
 <form action="">
 	<div class="form-group">
 		<label for="mail">e-mail</label>
@@ -19,4 +21,15 @@
 	</div>
 				
 </form>
+</div>
+<div class="col-xs-6">
+	
+</div>
+</div>
+
+
+<div id="footer" class="container"> 
+<?php 
+include_once ("footer.php");
+?>
 </div>

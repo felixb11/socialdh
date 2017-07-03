@@ -34,10 +34,10 @@
 				<!--Menu grande-->
 				<div class="collapse navbar-collapse" id="navbar-1">
 				 	<ul class="nav navbar-nav navbar-right">
-				 		<li><a href="#inicio">Inicio</a></li>
-				 		<li><a href="#registro">Registro</a></li>
-				 		<li><a href="#ingreso">Ingreso</a></li>
-				 		<li><a href="#preguntas">Preguntas</a></li>
+				 		<li><a href="index.php">Inicio</a></li>
+				 		<li><a href="registro.php">Registro</a></li>
+				 		<li><a href="ingreso.php">Ingreso</a></li>
+				 		<li><a href="index.php#preguntas">Preguntas</a></li>
 				 	</ul>
 				<!--Pongo una barra de busqueda-->
 					<form action="" class="navbar-form navbar-right" role="search">

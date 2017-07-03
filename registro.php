@@ -1,4 +1,5 @@
 <?php 
+include_once("header.php");
 	
 if ($_POST)
 {
@@ -52,3 +53,9 @@ $pais = ["Argentina","Brasil", "Inglatera", "Canada", "USA", "Francia"]
 	</div>
 				
 </form>
+
+<div id="footer" class="container"> 
+<?php 
+include_once ("footer.php");
+?>
+</div>

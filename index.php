@@ -10,19 +10,6 @@ include_once ("header.php");
 
 </div>
 
-<div id="registro" class="container">
-<?php
-
-include_once ("registro.php");
-?>
-</div>
-
-<div id="ingreso" class="container">
-<?php
-include_once ("ingreso.php");
-?>
-</div>
-
 <div id="preguntas" class="container">
 <?php
 include_once ("preguntas.php");
