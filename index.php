@@ -1,4 +1,3 @@
-<div id="inicio" class="container">
 <?php 
 include_once ("header.php");
 ?>
@@ -8,7 +7,7 @@ include_once ("header.php");
 <br>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nemo alias dignissimos dolor, ipsum modi cupiditate nostrum hic vitae porro. Magnam, modi cupiditate veniam, ea incidunt quo iusto veritatis sit!</p>
 
-</div>
+
 
 <div id="preguntas" class="container">
 <?php
