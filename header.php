@@ -1,3 +1,6 @@
+<?php 
+	include_once("funciones.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -36,7 +39,11 @@
 				 	<ul class="nav navbar-nav navbar-right">
 				 		<li><a href="index.php">Inicio</a></li>
 				 		<li><a href="registro.php">Registro</a></li>
-				 		<li><a href="ingreso.php">Ingreso</a></li>
+				<?php if (estaLogueado()): ?>
+				 		<li><a href="salir.php">Salir</a></li>
+				<?php else: ?>
+						<li><a href="ingreso.php">Ingreso</a></li>
+				<?php endif ?>
 				 		<li><a href="index.php#preguntas">Preguntas</a></li>
 				 	</ul>
 				<!--Pongo una barra de busqueda-->
