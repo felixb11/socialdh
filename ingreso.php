@@ -21,7 +21,7 @@ $defaultMail = "";
 			}
 	}
 ?>
-<h1>Aca va a estar el INGRESO</h1>
+<h1>INGRESO</h1>
 
 <div class="row">
 <div class="col-xs-6">

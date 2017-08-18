@@ -19,7 +19,6 @@ $errores = [];
 				$defaulMail = $_POST["mail"];
 			}
 
-
 		if (count($errores) == 0) 
 			{	
 			// armo el usuario
@@ -28,7 +27,10 @@ $errores = [];
 			guardarImagen($mail);
 			guardarUsuario($usuario);
 
-			traerTodos();exit;
+			// traerTodos();
+			header("Location:ingreso.php");
+
+
 
 			}
 			else
@@ -39,10 +41,6 @@ $errores = [];
 					echo "<br>";
 				}
 			}
-		}
-	else
-		{
-			echo "ingresamos por get";
 		}
 
 $pais = ["Argentina","Brasil", "Inglatera", "Canada", "USA", "Francia"]

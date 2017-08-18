@@ -5,15 +5,11 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-		<meta charset="utf-8">
 		<title>Comunidad Deportiva </title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<!--
-		<link rel="stylesheet" type="text/css" href="css/style_mov.css">
-		<link rel="stylesheet" type="text/css" href="css/style_tab.css">
-		<link rel="stylesheet" type="text/css" href="css/style_des.css">
--->		
+	
 		<link rel="stylesheet" href="css/bootstrap.css">
+
 		<link rel="stylesheet" href="css/styles.css">	
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -23,7 +19,7 @@
 <div class="container-fluid">
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container-fuid">
+			<div class="container-fuid cont-nav">
 				<!-- Menu para moviles-->
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
@@ -38,13 +34,14 @@
 				<div class="collapse navbar-collapse" id="navbar-1">
 				 	<ul class="nav navbar-nav navbar-right">
 				 		<li><a href="index.php">Inicio</a></li>
-				 		<li><a href="registro.php">Registro</a></li>
+				 		<li><a href="index.php#preguntas">Preguntas</a></li>
+				 		<!-- <li><a href="registro.php">Registro</a></li> -->
 				<?php if (estaLogueado()): ?>
 				 		<li><a href="salir.php">Salir</a></li>
 				<?php else: ?>
+						<li><a href="registro.php">Registro</a></li>
 						<li><a href="ingreso.php">Ingreso</a></li>
 				<?php endif ?>
-				 		<li><a href="index.php#preguntas">Preguntas</a></li>
 				 	</ul>
 				<!--Pongo una barra de busqueda-->
 					<form action="" class="navbar-form navbar-right" role="search">

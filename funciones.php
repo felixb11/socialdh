@@ -20,11 +20,28 @@ function validarInformacion($info)
 			{
 				$errores["username"] = "Debe ingresar mas de 3 caracteres";
 			}
-
+		// Valido el e-mail
 		if ($info["mail"] == "") 
 			{
 				$errores["mail"] = "El mail no puede ser nulo gil";
 			}
+			elseif (filter_var($info["mail"],FILTER_VALIDATE_EMAIL) == false) 
+			{
+				$errores["mail"] = "El mail tiene que ser un mail";
+			}
+			elseif (traerPorMail($info["mail"]) != NULL) 
+			{
+				$errores["mail"] = "El usuario ya existe";
+			}
+
+			// Valido el password
+
+			if ($info["pwd"] == "")
+				{ $errores["pwd"] = "El password no puede se nullo";}
+			if ($info["c_pwd"] == "")
+				{ $errores["c_pwd"] = "La confirmación del PASSWORD no puede ser nula";}
+			if ($info["pwd"] != "" && $info["c_pwd"] != "" && $info["pwd"] != $info["c_pwd"])
+				{ $errores["pwd"] = "Las contraseñas no coinciden";}
 
 		return $errores;		
 	}
