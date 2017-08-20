@@ -25,8 +25,8 @@ $errores = [];
 			$usuario = armarUsuario($_POST);
 			$mail = $_POST["mail"];
 			guardarImagen($mail);
-			guardarUsuario($usuario);
-
+			$usuario = guardarUsuario($usuario);
+			var_dump($usuario);
 			// traerTodos();
 			header("Location:ingreso.php");
 

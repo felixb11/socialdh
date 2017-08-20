@@ -1,6 +1,7 @@
 <?php 
 
 session_start();
+require_once("pdo.php");
 
 	if (!isset($_SESSION["logueado"]) && isset($_COOKIE["logueado"])) 
 	{
@@ -31,7 +32,9 @@ function validarInformacion($info)
 			}
 			elseif (traerPorMail($info["mail"]) != NULL) 
 			{
-				$errores["mail"] = "El usuario ya existe";
+				$mail = $info["mail"];
+				$errores["mail"] = "El mail ya existe";
+				header("Location:ingreso.php?mail=$mail");
 			}
 
 			// Valido el password
@@ -58,10 +61,22 @@ function armarUsuario($datos)
 
 function guardarUsuario($usuario)
 	{
-		// convierto el array $usuario en un JSON
-		$jsonUsuario = json_encode($usuario); 
+		// $jsonUsuario = json_encode($usuario); 
+		// file_put_contents("usuario.json", $jsonUsuario . PHP_EOL, FILE_APPEND);
+		global $db;
+		// preparo la query
+		$query = $db->prepare("INSERT INTO usuario VALUES(default, :user, :mail, :pwd, :foto)");
+		$query->bindValue(":user",$usuario["username"]);
+		$query->bindValue(":mail",$usuario["mail"]);
+		$query->bindValue("pwd",$usuario["pwd"]);
+		$query->bindValue("foto",NULL);
 
-		file_put_contents("usuario.json", $jsonUsuario . PHP_EOL, FILE_APPEND);
+		$id = $db->lastInsertId();
+		$usuario["id"] = $id;
+
+		$query->execute();
+
+		return $usuario;
 
 	}	
 
@@ -90,34 +105,24 @@ function guardarImagen($mail)
 
 function traerTodos()
 	{
-		$archivoJSON = file_get_contents("usuario.json");
-		// cargo el archivo JSON en una variable
-		$arrayDeJSON = explode(PHP_EOL, $archivoJSON);
-		// divido la variable en varios arreglos de JSON
-		array_pop($arrayDeJSON);
-		// elimina el ultimo elemento de la matriz
+		global $db;
 
-		$arrayFinal = [];
+		$query = $db->prepare("Select * from usuario");
+		$query->execute();
 
-		foreach ($arrayDeJSON as $json) 
-		{
-			$arrayFinal[] = json_decode($json,true);
-		}
-		return $arrayFinal;
+		return $query->fetchAll();
 	}
 
 function traerPorMail($mail)
 	{
-		$usuarios = traerTodos();
+		global $db;
 
-		foreach ($usuarios as $usuario) 
-		{
-			if ($usuario["mail"] == $mail)
-			{
-				return $usuario;
-			}
-		}
-		return NULL;
+		$query = $db->prepare("SELECT * FROM usuario WHERE email = :mail");
+		$query->bindValue(":mail", $mail);
+
+		$query->execute();
+
+		return $query->fetch();
 	}
 
 function validarLogin($informacion)
