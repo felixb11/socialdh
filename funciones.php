@@ -1,5 +1,4 @@
 <?php 
-
 session_start();
 require_once("pdo.php");
 
@@ -146,8 +145,6 @@ function validarLogin($informacion)
 			}
 
 			$usuario = traerPorMail($informacion["mail"]);
-			echo "El usuario es: ";
-			var_dump($usuario) ;
 
 			if ($informacion["pwd"] == "") 
 			{

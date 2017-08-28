@@ -29,9 +29,6 @@ $errores = [];
 			var_dump($usuario);
 			// traerTodos();
 			header("Location:ingreso.php");
-
-
-
 			}
 			else
 			{

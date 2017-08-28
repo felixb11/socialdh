@@ -20,6 +20,19 @@ $defaultMail = "";
 				}
       		header("Location:index.php");
 			}
+			else
+			{
+				?>
+					<div class="alert alert-info">
+						<p><strong>Atención: </strong><?php echo $errores["pwd"];  ?></p>
+					</div>
+				<?php
+				if (isset($_POST["mail"])) 
+				{
+					$defaultMail = $_POST["mail"];
+				}
+				
+			}
 	}
 ?>
 <h1>INGRESO</h1>
