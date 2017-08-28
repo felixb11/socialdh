@@ -112,6 +112,22 @@ function traerTodos()
 		return $query->fetchAll();
 	}
 
+function traerTodosJson() {
+		$archivoJSON = file_get_contents("usuario.json");
+
+		$arrayDeJSONS = explode(PHP_EOL, $archivoJSON);
+
+		array_pop($arrayDeJSONS);
+
+		$arrayFinal = [];
+
+		foreach ($arrayDeJSONS as $json) {
+			$arrayFinal[] = json_decode($json, true);
+		}
+
+		return $arrayFinal;
+	}
+
 function traerPorMail($mail)
 	{
 		global $db;
