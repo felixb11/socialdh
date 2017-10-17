@@ -1,6 +1,7 @@
 <?php 
-	include_once("funciones.php");
+require_once("soporte.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,7 +39,9 @@
 				 		<li><a href="migracion.php">Migración</a></li>
 				 		<li><a href="index.php#preguntas">Preguntas</a></li>
 				 		<!-- <li><a href="registro.php">Registro</a></li> -->
-				<?php if (estaLogueado()): ?>
+
+						
+				<?php if ($auth->estaLogueado()): ?>
 				 		<li><a href="salir.php">Salir</a></li>
 				<?php else: ?>
 						<li><a href="registro.php">Registro</a></li>

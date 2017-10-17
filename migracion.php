@@ -1,7 +1,7 @@
 
 <?php 
-include_once("funciones.php");
-include_once("pdo.php");
+// include_once("funciones.php");
+// include_once("pdo.php");
 include_once("header.php");
 
 // 1 conectar a la base
@@ -25,17 +25,21 @@ include_once("header.php");
 
 ?> 
 	<h1>Estoy en la migracion</h1>
+	<h2>Falta pasarla a objetos</h2>
 <?php
 
-$elJson=traerTodosJson();
+// $elJson->traerTodos();
 
-echo "<br>";
+// echo "<br>";
 
-foreach ($elJson as $key => $valor) 
-{
-	// $user = guardarUsuario($valor);
-	echo $valor["username"]. " " .$key;
-	echo "<br>";
-}
+// foreach ($elJson as $key => $valor) 
+// {
+
+// 	// $user = guardarUsuario($valor);
+// 	echo $valor["username"]. " " .$key;
+// 	echo "<br>";
+// }
+
+
 
 ?>

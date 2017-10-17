@@ -1,6 +1,8 @@
 <?php 
 include_once("header.php");
 
+require_once("clases/usuario.php");
+
 $defaulUsuario = "";
 $defaulMail = "";
 
@@ -9,7 +11,7 @@ $errores = [];
 
 	if ($_POST)
 		{
-			$errores = validarInformacion($_POST);
+			$errores = $validador->validarInformacion($_POST, $db);
 			if (!isset($errores["username"])) 
 			{
 				$defaulUsuario = $_POST["username"];
@@ -22,10 +24,12 @@ $errores = [];
 		if (count($errores) == 0) 
 			{	
 			// armo el usuario
-			$usuario = armarUsuario($_POST);
+			$usuario = new Usuario($_POST);
 			$mail = $_POST["mail"];
-			guardarImagen($mail);
-			$usuario = guardarUsuario($usuario);
+
+			// $usuario->guardarImagen($mail); 
+			
+			$usuario = $db->guardarUsuario($usuario);
 			var_dump($usuario);
 			// traerTodos();
 			header("Location:ingreso.php");

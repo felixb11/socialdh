@@ -7,8 +7,7 @@ require_once("pdo.php");
 		$_SESSION["logueado"] = $_COOKIE["logueado"];
 	}
 
-function validarInformacion($info)
-	{
+function validarInformacion($info){
 		$errores = [];
 		foreach ($info as $clave => $valor) 
 			{
@@ -47,9 +46,7 @@ function validarInformacion($info)
 
 		return $errores;		
 	}
-
-function armarUsuario($datos) 
-	{
+function armarUsuario($datos){
 		$usuario = [
 			"username" => $datos["username"],
 			"mail" => $datos["mail"],
@@ -57,9 +54,8 @@ function armarUsuario($datos)
 		];
 		return $usuario;
 	}
-
-function guardarUsuario($usuario)
-	{
+// Usuario 	
+function guardarUsuario($usuario){
 		// $jsonUsuario = json_encode($usuario); 
 		// file_put_contents("usuario.json", $jsonUsuario . PHP_EOL, FILE_APPEND);
 		global $db;
@@ -76,11 +72,9 @@ function guardarUsuario($usuario)
 		$query->execute();
 
 		return $usuario;
-
-	}	
-
-function guardarImagen($mail) 
-	{
+	}
+//DBMySQL		
+function guardarImagen($mail){
 	
 		if ($_FILES["avatar"]["error"] == UPLOAD_ERR_OK)
 		{
@@ -101,17 +95,15 @@ function guardarImagen($mail)
 			move_uploaded_file($archivo, $miArchivo);
 		}
 	}
-
-function traerTodos()
-	{
+// Usuario	
+function traerTodos(){
 		global $db;
-
 		$query = $db->prepare("Select * from usuario");
 		$query->execute();
 
 		return $query->fetchAll();
 	}
-
+//DBMySQL	
 function traerTodosJson() {
 		$archivoJSON = file_get_contents("usuario.json");
 
@@ -127,9 +119,7 @@ function traerTodosJson() {
 
 		return $arrayFinal;
 	}
-
-function traerPorMail($mail)
-	{
+function traerPorMail($mail){
 		global $db;
 
 		$query = $db->prepare("SELECT * FROM usuario WHERE email = :mail");
@@ -139,9 +129,8 @@ function traerPorMail($mail)
 
 		return $query->fetch();
 	}
-
-function validarLogin($informacion)
-	{
+//DBMySQL	
+function validarLogin($informacion){
 		$errores = [];
 		foreach ($informacion as $clave => $valor) 
 		{
@@ -170,19 +159,15 @@ function validarLogin($informacion)
 
 		return $errores;
 	}
-
-function loguear($email) 
-	{
-		$_SESSION["logueado"] = $email;
+function loguear($email){
+	$_SESSION["logueado"] = $email;
 	}
-
-function estaLogueado() 
-	{
-		return isset($_SESSION["logueado"]);
+//auth
+function estaLogueado(){
+	return isset($_SESSION["logueado"]);
 	}
-
-function usuarioLogueado() 
-	{
+//auth
+function usuarioLogueado(){
 		if (estaLogueado()) 
 		{
 			$mail = $_SESSION["logueado"];
@@ -192,18 +177,15 @@ function usuarioLogueado()
 		{
 			return NULL;
 		}
-	}		
-
-function logout()
-	{
-		session_destroy();
-		setcookie("logueado", "", -1);		
+		}	
+//auth
+function logout(){
+	session_destroy();
+	setcookie("logueado", "", -1);		
 	}
-
-function recordame($email) 
-	{
-		setcookie("logueado", $email, time() + 3600 * 2);
+//auth
+function recordame($email){
+	setcookie("logueado", $email, time() + 3600 * 2);
 	}
-
-
+//auth
 ?>

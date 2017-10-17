@@ -1,8 +1,9 @@
 <?php 
 include_once("header.php");
+
 $defaultMail = "";
 
-  if (estaLogueado()) 
+  if ($auth->estaLogueado()) 
   	{	
 		header("Location:index.php");
 	}

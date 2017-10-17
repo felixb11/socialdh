@@ -1,18 +1,20 @@
 <?php 
-include_once("funciones.php");
+// include_once("funciones.php");
+include("header.php");
+// En soporte.php se instancia $auth, $validador y $db
 
-	$usuarioLogueado = usuarioLogueado();
+	$usuarioLogueado = $auth->usuarioLogueado($db);
+
 	if ($usuarioLogueado == null) 
 		{
 			$nombre = "Invitado";
 		} 
 		else 
 		{
-			$nombre = $usuarioLogueado["username"];
+			$nombre = $usuarioLogueado->getUsername();
+			// donde esta?
 		}
 echo "Bienvendio $nombre";
-
-include_once ("header.php");
 
 ?>
 
