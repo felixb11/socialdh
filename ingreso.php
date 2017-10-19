@@ -11,13 +11,13 @@ $defaultMail = "";
 	$errores = [];
 	if ($_POST) 
 	{
-		$errores = validarLogin($_POST);
+		$errores = $validador->validarLogin($_POST, $db);
 		if (count($errores) == 0) 
 			{// LOGUEAR
-      		loguear($_POST["mail"]);
+      		$auth->loguear($_POST["mail"]);
       		if (isset($_POST["recordame"])) 
       			{//Quiere que lo recuerde
-					recordame($_POST["mail"]);
+					$auth->recordame($_POST["mail"]);
 				}
       		header("Location:index.php");
 			}

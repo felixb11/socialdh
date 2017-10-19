@@ -6,7 +6,7 @@ Esta es la clase usuario
 class Usuario{
 	private $id;
 	private $username;
-	private $mail;
+	private $email;
 	private $pwd;
 	private $edad;
 	private $pais;
@@ -18,10 +18,10 @@ class Usuario{
 		} else {
 			$this->pwd = password_hash($datos["pwd"], PASSWORD_DEFAULT);
 		}
-		$username->username = $datos["username"];
-		$mail->mail = $datos["mail"];
-		$edad->edad = $datos["edad"];
-		$pais->pais = $datos["pais"];
+		$this->username = $datos["username"];
+		$this->email = $datos["email"];
+		// $this->edad = $datos["edad"];
+		// $this->pais = $datos["pais"];
 	}
 
 	public function getId(){
@@ -37,10 +37,10 @@ class Usuario{
 		$this->username = $username;
 	}
 	public function getMail(){
-		return $this->mail;
+		return $this->email;
 	}
 	public function setMail($mail){
-		$this->mail = $mail;
+		$this->email = $mail;
 	}
 	public function getPwd(){
 		return $this->pwd;

@@ -10,12 +10,12 @@ class DBMySQL extends DB
 
 	public function __construct()
 	{
-		$dsn = 'mysql:host=localhost;dbname=socialdh; charset=utf8mb4;port=3306';
+		$dsn = 'mysql:host=localhost;dbname=socialdh;charset=utf8mb4;port=3306';
 		$user ="root";
 		$pass = "";
 
 		try {
-		  		$db = new PDO($dsn, $user, $pass);
+		  		$this->db = new PDO($dsn, $user, $pass);
 			} 
 			catch (Exception $e) 
 			{  
@@ -25,13 +25,13 @@ class DBMySQL extends DB
 
 	public function guardarUsuario(Usuario $usuario){
 	
-		$query = $this->$db->prepare("INSERT INTO usuario VALUES(default, :user, :mail, :pwd, :foto)");
+		$query = $this->db->prepare("INSERT INTO usuario VALUES(default, :user, :mail, :pwd, :foto)");
 		$query->bindValue(":user",$usuario["username"]);
 		$query->bindValue(":mail",$usuario["mail"]);
 		$query->bindValue("pwd",$usuario["pwd"]);
 		$query->bindValue("foto",NULL);
 
-		$id = $this->$db->lastInsertId();
+		$id = $this->db->lastInsertId();
 		$usuario= setId($id);
 
 		$query->execute();
@@ -40,7 +40,7 @@ class DBMySQL extends DB
 		}
 
 	public function traerTodos(){
-		$query = $this->$db->prepare("select * from usuario");
+		$query = $this->db->prepare("select * from usuario");
 		$query->execute();
 
 		$arrayFinal = [];

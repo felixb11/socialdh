@@ -1,5 +1,6 @@
 <?php 
-require("funciones.php");
-logout();
+// require("funciones.php");
+require("soporte.php");
+$auth->logout();
 header("Location:index.php");
 ?>
